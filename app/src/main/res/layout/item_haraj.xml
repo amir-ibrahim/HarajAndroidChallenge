@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="harajProperties"
+            type="com.example.harajtask.models.HarajModel" />
+
+        <variable
+            name="clickListener"
+            type="com.example.harajtask.adapters.BaseRecyclerAdapter.OnClickListener" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clItemCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{(view) -> clickListener.onClick(view,harajProperties)}"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:theme="@style/Theme.MaterialComponents.Light"
+        tools:targetApi="o">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivHarajItemThumb"
+            android:layout_width="140dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="16dp"
+            android:contentDescription="@string/todo"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/roundedImageView"
+            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+        <!--                android:text="@{expensesProperties.amount.toString()}"-->
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvHarajItemName"
+            style="@style/expenseItemStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:maxWidth="220dp"
+            android:maxLines="2"
+            android:text="@{harajProperties.title}"
+            android:textColor="@color/text_color_1"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ivHarajItemThumb"
+            tools:text="Product Discroption" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvHarajItemDate"
+            style="@style/expenseItemStyleLite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/text_color_2"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintEnd_toEndOf="@+id/tvHarajItemName"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/tvHarajItemName"
+            app:layout_constraintTop_toBottomOf="@+id/tvHarajItemName"
+            tools:text="Since 3 Hours" />
+
+        <ImageView
+            android:id="@+id/ivHarajItemComCount"
+            android:layout_width="15dp"
+            android:layout_height="18dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/todo"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="@+id/tvHarajItemDate"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/tvHarajItemDate"
+            app:layout_constraintTop_toBottomOf="@+id/tvHarajItemDate"
+            app:srcCompat="@drawable/ic_baseline_question_answer_gray_24" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvHarajItemComCount"
+            style="@style/expenseItemStyleLite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:textColor="@color/text_color_2"
+            android:visibility="invisible"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toBottomOf="@+id/ivHarajItemComCount"
+            app:layout_constraintEnd_toStartOf="@+id/ivHarajItemComCount"
+            app:layout_constraintTop_toTopOf="@+id/ivHarajItemComCount"
+            tools:text="(32)" />
+
+        <ImageView
+            android:id="@+id/ivProductUsernameIcon"
+            android:layout_width="15dp"
+            android:layout_height="18dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/todo"
+            app:layout_constraintBottom_toBottomOf="@+id/ivHarajItemThumb"
+            app:layout_constraintEnd_toEndOf="@+id/ivHarajItemComCount"
+            app:layout_constraintStart_toStartOf="@+id/ivHarajItemComCount"
+            app:layout_constraintTop_toBottomOf="@+id/ivHarajItemComCount"
+            app:srcCompat="@drawable/ic_baseline_person_gray_24" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvProductUsername"
+            style="@style/expenseItemStyleLite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:text="@{harajProperties.username}"
+            android:textColor="@color/text_color_2"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toBottomOf="@+id/ivProductUsernameIcon"
+            app:layout_constraintEnd_toStartOf="@+id/ivProductUsernameIcon"
+            app:layout_constraintTop_toTopOf="@+id/ivProductUsernameIcon"
+            tools:text="Folan Al Folani" />
+
+        <ImageView
+            android:id="@+id/ivProductCityIcon"
+            android:layout_width="15dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="4dp"
+            android:contentDescription="@string/todo"
+            app:layout_constraintBottom_toBottomOf="@+id/tvProductUsername"
+            app:layout_constraintStart_toEndOf="@+id/tvProductCity"
+            app:layout_constraintTop_toTopOf="@+id/tvProductUsername"
+            app:srcCompat="@drawable/ic_baseline_location_on_gray_24" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvProductCity"
+            style="@style/expenseItemStyleLite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@{harajProperties.city}"
+            android:textColor="@color/text_color_2"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toBottomOf="@+id/ivProductCityIcon"
+            app:layout_constraintStart_toEndOf="@+id/ivHarajItemThumb"
+            app:layout_constraintTop_toTopOf="@+id/ivProductCityIcon"
+            tools:text="Al Khobar" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

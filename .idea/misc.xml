@@ -1,5 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable-v24/ic_keyboard_backspace.xml" value="0.27395833333333336" />
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.27395833333333336" />
+        <entry key="app/src/main/res/drawable/bg_color.xml" value="0.26974358974358975" />
+        <entry key="app/src/main/res/drawable/ic_baseline_location_on_gray_24.xml" value="0.27395833333333336" />
+        <entry key="app/src/main/res/drawable/ic_baseline_menu_24.xml" value="0.27395833333333336" />
+        <entry key="app/src/main/res/drawable/ic_baseline_person_gray_24.xml" value="0.27395833333333336" />
+        <entry key="app/src/main/res/drawable/ic_baseline_question_answer_gray_24.xml" value="0.27395833333333336" />
+        <entry key="app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.14895833333333333" />
+        <entry key="app/src/main/res/drawable/ic_baseline_star_24.xml" value="0.2564814814814815" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.26974358974358975" />
+        <entry key="app/src/main/res/drawable/ic_location.xml" value="0.26974358974358975" />
+        <entry key="app/src/main/res/drawable/ic_search.xml" value="0.26974358974358975" />
+        <entry key="app/src/main/res/drawable/ic_share.xml" value="0.27395833333333336" />
+        <entry key="app/src/main/res/drawable/ic_user.xml" value="0.27395833333333336" />
+        <entry key="app/src/main/res/font/d.xml" value="0.27870370370370373" />
+        <entry key="app/src/main/res/font/eczar.xml" value="0.27870370370370373" />
+        <entry key="app/src/main/res/font/eczar_bold.xml" value="0.27870370370370373" />
+        <entry key="app/src/main/res/font/roboto.xml" value="0.27870370370370373" />
+        <entry key="app/src/main/res/layout/activity_hara.xml" value="0.2578125" />
+        <entry key="app/src/main/res/layout/activity_haraj.xml" value="0.2578125" />
+        <entry key="app/src/main/res/layout/activity_haraj_task.xml" value="0.2578125" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.2212962962962963" />
+        <entry key="app/src/main/res/layout/fragment_article.xml" value="0.2578125" />
+        <entry key="app/src/main/res/layout/fragment_haraj_details.xml" value="0.2578125" />
+        <entry key="app/src/main/res/layout/fragment_haraj_item_details.xml" value="0.4166666666666667" />
+        <entry key="app/src/main/res/layout/fragment_haraj_items.xml" value="0.43382997370727433" />
+        <entry key="app/src/main/res/layout/item_haraj.xml" value="0.5122349102773246" />
+        <entry key="app/src/main/res/layout/item_haraj_task.xml" value="0.2578125" />
+        <entry key="app/src/main/res/layout/round_image.xml" value="0.2578125" />
+        <entry key="app/src/main/res/layout/toolbar.xml" value="0.2578125" />
+        <entry key="app/src/main/res/menu/menu_toolbar.xml" value="0.2578125" />
+        <entry key="app/src/main/res/menu/sd.xml" value="0.2578125" />
+      </map>
+    </option>
+  </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />

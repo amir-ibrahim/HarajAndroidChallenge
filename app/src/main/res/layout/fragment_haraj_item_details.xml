@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:overScrollMode="never">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_weight="1">
+
+            <ImageView
+                android:id="@+id/ivHarajDetailsThumb"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/image_cover_1" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvProductName"
+            style="@style/expenseItemStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:text="Product Name"
+            android:textColor="@color/text_color_1"
+            android:textSize="24sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvProductDate"
+            style="@style/expenseItemStyleLite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="2021/09/13 5:44PM"
+            android:textColor="@color/text_color_2"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintEnd_toEndOf="@+id/tvProductName"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tvProductName"
+            app:layout_constraintTop_toBottomOf="@+id/tvProductName" />
+
+        <ImageView
+            android:id="@+id/ivProductUsernameIcon"
+            android:layout_width="15dp"
+            android:layout_height="18dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/todo"
+            app:layout_constraintStart_toStartOf="@+id/tvProductDate"
+            app:layout_constraintTop_toBottomOf="@+id/tvProductDate"
+            app:srcCompat="@drawable/ic_baseline_person_gray_24" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvProductUsername"
+            style="@style/expenseItemStyleLite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="Folan Al Folani"
+            android:textColor="@color/text_color_2"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toBottomOf="@+id/ivProductUsernameIcon"
+            app:layout_constraintStart_toEndOf="@+id/ivProductUsernameIcon"
+            app:layout_constraintTop_toTopOf="@+id/ivProductUsernameIcon" />
+
+        <ImageView
+            android:id="@+id/ivProductCityIcon"
+            android:layout_width="15dp"
+            android:layout_height="18dp"
+            android:layout_marginEnd="4dp"
+            android:contentDescription="@string/todo"
+            app:layout_constraintBottom_toBottomOf="@+id/tvProductUsername"
+            app:layout_constraintEnd_toStartOf="@+id/tvProductCity"
+            app:layout_constraintTop_toTopOf="@+id/tvProductUsername"
+            app:srcCompat="@drawable/ic_baseline_location_on_gray_24" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvProductCity"
+            style="@style/expenseItemStyleLite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="48dp"
+            android:text="Al Khobar"
+            android:textColor="@color/text_color_2"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toBottomOf="@+id/ivProductCityIcon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ivProductCityIcon" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvProductBody"
+            style="@style/expenseItemStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:text="I have Toyota Camry I have Toyota Camry I have Toyota Camry I have Toyota Camry I have Toyota Camry I have Toyota Camry "
+            android:textColor="@color/text_color_2"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/ivProductUsernameIcon"
+            app:layout_constraintTop_toBottomOf="@+id/ivProductUsernameIcon" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvProductContactMe"
+            style="@style/expenseItemStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:fontFamily="@font/roboto"
+            android:text="Please Contact me:"
+            android:textColor="@color/text_color_2"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintStart_toStartOf="@+id/tvProductBody"
+            app:layout_constraintTop_toBottomOf="@+id/tvProductBody" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvProductNumber"
+            style="@style/expenseItemStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/roboto"
+            android:maxWidth="220dp"
+            android:maxLines="2"
+            android:text="+966 123 23 2345"
+            android:textColor="@color/text_color_3"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tvProductContactMe"
+            app:layout_constraintTop_toBottomOf="@+id/tvProductContactMe" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
