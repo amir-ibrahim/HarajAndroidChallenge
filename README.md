@@ -29,3 +29,6 @@ Your work will be evaluated upon the following:
 
 ## Submission
 Fork this repository and share us the link to your fork after pushing the changes.
+
+## Developer
+I take the data.json file and put him on the server to simulate the request in a better way.
